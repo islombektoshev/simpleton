@@ -34,6 +34,10 @@ func NewSingleton[T any](name string, provider Provider[T]) Singleton[T] {
 	}
 }
 
+func New[T any](name string, provider func() T) Singleton[T] {
+	return NewSingleton(name, provider)
+}
+
 func (s *Singleton[T]) GetState() State {
 	return s.state
 }
