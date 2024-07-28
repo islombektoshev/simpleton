@@ -1,0 +1,1 @@
+Very simple singleton code to build applications 
